@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8">
+	<meta name="referrer" content="never" />
+	<title>Vue Transition Demo</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" type="image/x-icon" href="/public/favicon.ico">
+	<script type="text/javascript" src="../node_modules/vue/dist/vue.global.js"></script>
+</head>
+<body>
+<h1>Vue 3 Computed Property Demo</h1>
+<div id="demo">
+	<button v-on:click="x++">
+		Increment x
+	</button>
+	<p>x: {{ x }}</p>
+	<p>y: {{ y }}</p>
+	<p>x + y: {{ sumXY }}</p>
+</div>
+<script>
+	Vue.createApp({
+		data() {
+			return {
+				x: 1,
+				y: 1
+			};
+		},
+		computed: {
+			sumXY() {
+				return this.x + this.y;
+			}
+		}
+	}).mount("#demo");
+</script>
+</body>
+</html>

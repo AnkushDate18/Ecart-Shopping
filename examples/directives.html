@@ -1,0 +1,17 @@
+<!-- Example 1: Directives -->
+<p v-if="seen">Now you see me</p>
+
+
+
+<!-- Example 2: Directive arguments -->
+<a v-bind:href="url"> ... </a>
+
+<script>
+	Vue.createApp({
+		data() {
+			return {
+				url: "https://google.com"
+			};
+		}
+	}).mount("#app");
+</script>

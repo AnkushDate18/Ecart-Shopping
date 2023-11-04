@@ -1,0 +1,18 @@
+<body>
+<div id="app">{{ message }}</div>
+<script>
+	const app = Vue.createApp({
+		data() {
+			return {
+				message: ""
+			};
+		}
+	});
+
+	app.mount("#app");
+
+	setTimeout(() => {
+		app.message = "Hello!";
+	}, 1000);
+</script>
+</body>
